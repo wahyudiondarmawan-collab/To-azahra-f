@@ -1,0 +1,155 @@
+/* Variabel Warna */
+:root {
+    --primary: #1b4332; /* Hijau Tua */
+    --accent: #d4af37;  /* Emas */
+    --bg-body: #fdfaf5;
+    --text-main: #2c3e50;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-body);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: var(--white);
+    max-width: 450px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Dekorasi Atas */
+.card::before {
+    content: '✨';
+    font-size: 24px;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-family: 'Amiri', serif;
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.subtitle {
+    color: var(--accent);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin: 25px 0;
+    color: #555;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.message small {
+    display: block;
+    margin-top: 5px;
+    font-style: normal;
+    color: #999;
+}
+
+.info-section {
+    background: #f8fbf9;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px dashed var(--accent);
+    margin-bottom: 25px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item strong {
+    font-size: 0.75rem;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.info-item p {
+    margin: 5px 0 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Styling Map */
+.map-wrapper {
+    margin-top: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.btn {
+    display: block;
+    background: var(--primary);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.2);
+}
+
+.btn:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+    .card {
+        padding: 30px 20px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
